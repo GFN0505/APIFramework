@@ -2,7 +2,7 @@ package pojo;
 
 import java.util.List;
 
-public class F4B {
+public class RWFPayout {
 	
 	private String account_number;
 	private String account_bank;
