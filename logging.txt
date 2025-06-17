@@ -1,4 +1,4 @@
-Request method:	POST
+Request method:	GET
 Request URI:	https://f4b-v3-dashboard-staging-api.sandbox-flutterwave.com/v3/transfers
 Proxy:			<none>
 Request params:	<none>
@@ -14,9 +14,9 @@ Body:
 {
     "account_number": "1234567890",
     "account_bank": "30",
-    "narration": "AutomationTest",
-    "amount": 0,
-    "reference": "testRef 759",
+    "narration": "AutoTest1",
+    "amount": 350,
+    "reference": "testRef 47",
     "currency": "RWF",
     "beneficiary_name": "Jane Doe",
     "debit_currency": "NGN",
@@ -49,23 +49,632 @@ Body:
         }
     ]
 }
-HTTP/1.1 400 Bad Request
-Date: Mon, 16 Jun 2025 20:09:08 GMT
+HTTP/1.1 200 OK
+Date: Tue, 17 Jun 2025 19:50:15 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 84
+Transfer-Encoding: chunked
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
 access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang, x-file-name
 access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
-etag: W/"54-ZBtSRnnEEDIBCaOznWsI1R17y30"
+etag: W/"1338-vPtSwNVuHluU9vW1OAE24ME6Al4"
 cf-cache-status: DYNAMIC
-Set-Cookie: __cf_bm=mwUCzyH1_AhVukzogcJkjGmVtaCVYvOupp8CBhpp1Ck-1750104548-1.0.1.1-1txlv5OxzPuq0DyEI2R8vjgpgV4F5UVsSdla5yYrw9LrTiwiqJEvd3kHhwhkvYMiaiQVemgDbPhZtveU7chnqE4C8glUoiGMAjqJdU3HcYs; path=/; expires=Mon, 16-Jun-25 20:39:08 GMT; domain=.sandbox-flutterwave.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: __cf_bm=dz9mAu2lU.9ogLCXovV7r7QIcJjYAP1fhCd_dfkwCyo-1750189815-1.0.1.1-QnTF10o4_1O7DrZa6jVIUjpceRou10wfsmxyfBOufupOD5fQ_4n_OML1wK06OisqkgCwwQDURZAtiBmSQoGEm0RnIjNf4UtAjJ8PnQLiZSg; path=/; expires=Tue, 17-Jun-25 20:20:15 GMT; domain=.sandbox-flutterwave.com; HttpOnly; Secure; SameSite=None
 Server: cloudflare
-CF-RAY: 950cf164ec063eac-CPT
+CF-RAY: 951513258a47aa64-CPT
+Content-Encoding: gzip
 
 {
-    "status": "error",
-    "message": "amount must be greater than or equal to 1",
-    "data": null
+    "status": "success",
+    "message": "Transfers fetched",
+    "meta": {
+        "page_info": {
+            "total": 1694,
+            "current_page": 1,
+            "total_pages": 170
+        }
+    },
+    "data": [
+        {
+            "id": 247259,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:34:18.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 314",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247258,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:34:15.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 348",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247257,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:30:30.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 590",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247256,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:30:22.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 706",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247255,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:05:08.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 489",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247254,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:05:02.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 364",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247253,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:13:23.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 786",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247252,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:13:13.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 216",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247251,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:01:42.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 226",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247250,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:01:31.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 121",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        }
+    ]
+}
+Request method:	GET
+Request URI:	https://f4b-v3-dashboard-staging-api.sandbox-flutterwave.com/v3/transfers
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=FLWSECK-dc63611d01f0d12a05a67473ac618460-195afc6eddcvt-X
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account_number": "1234567890",
+    "account_bank": "30",
+    "narration": "AutoTest2",
+    "amount": 351,
+    "reference": "testRef 455",
+    "currency": "RWF",
+    "beneficiary_name": "Jane Doe",
+    "debit_currency": "NGN",
+    "meta": [
+        {
+            "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+            "beneficiaryCountry": "RW",
+            "accountNumber": "1234567890",
+            "mobileNumber": "25012345678",
+            "routingNumber": "30",
+            "senderCountry": "NG",
+            "beneficiaryName": "Jane Doe",
+            "senderIdNumber": "2345649",
+            "senderIdType": "01",
+            "senderIdExpiry": "2032-02-06",
+            "beneficiaryIdNumber": "123456y5434",
+            "beneficiaryAddress": "Kigali-Gatuna Rd, Kigali, Rwanda",
+            "senderDateOfBirth": "2006-02-22",
+            "beneficiaryIdType": "01",
+            "beneficiaryIdExpiry": "2029-02-16",
+            "beneficiaryDob": "2007-12-31",
+            "senderGender": "m",
+            "debitCurrencyAmount": "12.39",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "bankName": "ACCESS RWANDA",
+            "sender": "Godsfavour Nwoko",
+            "senderCity": "Lagos",
+            "beneficiaryMobileNumber": "25012345678"
+        }
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 17 Jun 2025 19:50:16 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang, x-file-name
+access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
+etag: W/"1338-vPtSwNVuHluU9vW1OAE24ME6Al4"
+cf-cache-status: DYNAMIC
+Set-Cookie: __cf_bm=KdqXq8OBEuqGaS8oQ98EdNn.ZOIVpFeTkDcOzcvzEF4-1750189816-1.0.1.1-xI74UxCXoEVld1lAjK3rD0q4f1i.gtuVWaQIhof3bcwCGZCMdanrNZVOjCBen66Yw_CwUhKb.7Dpp9SZLdPAS2v2_m5iy9MejGpfUpYptl0; path=/; expires=Tue, 17-Jun-25 20:20:16 GMT; domain=.sandbox-flutterwave.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 9515132e78e641e2-CPT
+Content-Encoding: gzip
+
+{
+    "status": "success",
+    "message": "Transfers fetched",
+    "meta": {
+        "page_info": {
+            "total": 1694,
+            "current_page": 1,
+            "total_pages": 170
+        }
+    },
+    "data": [
+        {
+            "id": 247259,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:34:18.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 314",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247258,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:34:15.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 348",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247257,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:30:30.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 590",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247256,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:30:22.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 706",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247255,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:05:08.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 489",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247254,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T19:05:02.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 364",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247253,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:13:23.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 786",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247252,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:13:13.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 216",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247251,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:01:42.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 351,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 226",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest2",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        },
+        {
+            "id": 247250,
+            "account_number": "1234567890",
+            "bank_code": "30",
+            "full_name": "Jane Doe",
+            "created_at": "2025-06-17T18:01:31.000Z",
+            "currency": "RWF",
+            "debit_currency": "NGN",
+            "amount": 350,
+            "fee": 2000,
+            "status": "SUCCESSFUL",
+            "reference": "testRef 121",
+            "meta": [
+                {
+                    "address": "Kigali-Gatuna Rd, Kigali, Rwanda",
+                    "sender": "Godsfavour Nwoko",
+                    "beneficiary_country": "RW"
+                }
+            ],
+            "narration": "AutoTest1",
+            "approver": null,
+            "complete_message": "Successful",
+            "requires_approval": 0,
+            "is_approved": 1,
+            "bank_name": "FA-BANK"
+        }
+    ]
 }

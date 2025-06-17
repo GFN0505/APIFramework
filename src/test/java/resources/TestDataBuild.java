@@ -10,7 +10,7 @@ import pojo.RWFPayout;
 public class TestDataBuild {
 	
 	
-	public RWFPayout rwfPayoutPayload()
+	public RWFPayout rwfPayoutPayload(String narration, int amount, String senderIdNumber)
 	{
 		
 		Random random = new Random();
@@ -18,8 +18,8 @@ public class TestDataBuild {
 		RWFPayout p = new RWFPayout();
 		p.setAccount_number("1234567890");
 		p.setAccount_bank("30");
-		p.setAmount(random.nextInt(900));
-		p.setNarration("AutomationTest");
+		p.setAmount(amount);
+		p.setNarration(narration);
 		p.setReference("testRef "+random.nextInt(900));
 		p.setCurrency("RWF");
 		p.setBeneficiary_name("Jane Doe");
@@ -39,7 +39,7 @@ public class TestDataBuild {
         meta.setSender("Godsfavour Nwoko");
         meta.setSenderCountry("NG");
         meta.setBeneficiaryName("Jane Doe");
-        meta.setSenderIdNumber("2345645");
+        meta.setSenderIdNumber(senderIdNumber);
         meta.setSenderIdType("01");
         meta.setSenderIdExpiry("2032-02-06");
         meta.setSenderCity("Lagos");
